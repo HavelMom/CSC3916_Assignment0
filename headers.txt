@@ -1,0 +1,42 @@
+
+
+First Request : Book Search
+
+
+Key				Value
+-------------------------------------------------------------------------------------
+Content-Type			application/json; charset=UTF-8
+- 'Indicates the resource's media type', since the value here is JSON and UTF-8, this means that the response is in JSON and in UTF-8 character type. 
+
+Vary				Origin
+- 'Determines how to match future request headers to decided whether the cached response can be used rather than requesting a fresh one', this basically tell the browsers or caches that the responses may differ, Origin here means where the request came from. 
+
+Vary				X-Origin
+- 'Determines how to match future request headers to decided whether the cached response can be used rather than requesting a fresh one', in this case x-origin is a custom origin header.
+
+Vary				Referer
+- 'Determines how to match future request headers to decided whether the cached response can be used rather than requesting a fresh one', and in this case, Referer means  which page made the request. 
+
+Content-Encoding		gzip
+- 'An entity header indicating the encoding method applied to the entity body', here, the encoding method was gzip, which means the response has been compressed.
+
+Date				Sun, 02 Feb 2025 18:03:27 GMT
+- 'A general header containing the date and time the message was sent', this just means when the request was sent, I ran it again this morning, time will change on last request. 
+
+Server				ESF
+- 'Contains information on how the server handles requests', this value means that Googles edge service frame work handled the request. 
+
+X-XSS-Protection		0
+- 'Stops pages from loading when they detect reflected cross site scripting 'XSS' attacks', this is a checkmark key, /value pair, the 0 means that this protection is disabled. 
+
+X-Frame-Options			SAMEORIGIN
+- 'Used to avoid clickjacking attacks by making sure their content is not embedded into other sites', same thing there, the value here means that the response can only be from the same origin. 
+
+X-Content-Type-Options		nosniff
+- 'Can be used to opt out of MIME type sniffing a response away from the declared content type', no sniff here means that the browser has to use the same content type provided.
+
+Alt-Svc				h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+- 'Custom header', this sets the standard in a way, tells the client it has to use HTTP3 on port 443.
+
+Transfer-Encoding		chunked
+- 'Specifying the form of encoding used to transfer the entity to the user', this just means that the response is sent in chunks, not all at once. 
