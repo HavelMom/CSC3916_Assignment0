@@ -8,9 +8,7 @@ module.exports = async (phrase) => {
         }
     })
 
-
-    //
-    //TODO: return a formattedObj
+    //TODO: return a formattedObj, already done, formatted obj is alreayd there
     var formattedObj = {
         data: results.data,
         status: results.status,
@@ -19,6 +17,7 @@ module.exports = async (phrase) => {
         requestHeader: results.config.headers
     }
 
-    //TODO: return the formattedObject
-    return JSON.stringify(results.data);
+    //TODO: return the formattedObject, just need to return th object, omit the json.stringify
+    //return JSON.stringify(results.data);
+    return formattedObj;
 }
